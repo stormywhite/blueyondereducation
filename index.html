@@ -8,7 +8,7 @@
 		font-size: 16;
 	}
 
-	p {
+	#para {
 		text-align: justify;
  		text-justify: inter-word;
 		width: 400px;
@@ -19,8 +19,8 @@
 	function auth() {
 		var uname = document.getElementById("username").value;
 		var pword = document.getElementById("password").value;
-		var rname = "aics2022";
-		var rpword = "commonwealth";		
+		var rname = "engr2024";
+		var rpword = "cityofplace";		
 		if(uname == "" && pword == "") {
 			alert("Please type in username and password");
 		} else {
@@ -44,6 +44,12 @@
 <br />
 <table id = "login">
 	<tr>
+		<td colspan = "2" align= "center"><h2>SECTION ENGR-2122 SURVEY FORM</h2></td>
+	</tr>
+	<tr>
+		<td colspan = "2" align= "center">To ensure you're not a robot. Please your authentication provided to you.</td>
+	</tr>
+	<tr>
 		<td>Username: </td>
 		<td><input type = "text" id = "username"/></td>
 	</tr>
@@ -55,17 +61,7 @@
 		<td colspan = "2" align = "right"><input type = "button" value = "Log-In" id = "loginbtn" onClick = "auth()"/></td>
 	</tr>
 </table>
-<p id = "para">
-	Love, alam mo nasabe ko na yata lahat lahat sayo. Walang proper words or phrases ang makakapag describe exactly ng papel mo sa buhay ko. 
-	Nasanay na nga ako ng buong buhay ko ng walang companionship or in-relationship state, pero nagbago ang lahat simula nung September 8. 
-	Tinumbasan mo love lahat lahat ng bagay na hinahanap ko sa isang babae, I would not say you are perfect, but you perfectly fill in the gap
-	of my life. You inspired and teach me at certain aspect of life, I want you to teach me more and become a part of my entire life,
-	as my partner, my girlfriend and soon to be my wife <b>not</b> until we both see each other skin turn to wrinkle, our black hair turn to white,
-	<b>but until</b> we both breathe our last air. 
-	<br />
-	
-	Sorry for my discrepancies, there are a lot times that I lost my maturity and lost my patience but believe me, I do not really want to lose you. Mahal na mahal po kita 
-</p>
+<img src = "My Card.jpeg" height = "700" id = "para"/>
 </center>
 </body>
 </html>
