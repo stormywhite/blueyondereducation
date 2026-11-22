@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 1. Essential for mobile scaling: matches screen width and prevents zoomed-out rendering -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    /* 2. Reset box-sizing so padding doesn't break container widths */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      /* Scales smoothly between 16px (mobile) and 18px (desktop) */
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      color: #222;
+      background-color: #f9f9f9;
+    }
+
+    /* 3. Fluid container that caps width on desktop but shrinks on mobile */
+    .container {
+      width: min(92%, 1100px);
+      margin-inline: auto;
+      padding-block: 2rem;
+    }
+
+    h1 {
+      /* Fluid heading: min 1.75rem, scales with viewport, max 3rem */
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    /* 4. Responsive Grid: automatically stacks on mobile and expands on larger screens */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* 5. Prevent images and media from overflowing narrow screens */
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    /* 6. Optional Media Query for mobile-specific tweaks (screens under 600px) */
+    @media (max-width: 600px) {
+      .container {
+        padding-block: 1rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <section class="card-grid">
+      <article class="card">
+        <img src="1.jpg" alt="Placeholder">
+      </article>
+
+      <article class="card">
+        <img src="2.jpg" alt="Placeholder">
+      </article>
+
+<article class="card">
+        <img src="3.jpg" alt="Placeholder">
+      </article>
+<article class="card">
+        <img src="4.jpg" alt="Placeholder">
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
